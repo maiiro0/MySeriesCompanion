@@ -1,5 +1,12 @@
-<?php require_once __DIR__ . '/../inc/fonctions-series.php'; 
+<?php require_once __DIR__ . '/../inc/fonctions-series.php';
 require_once __DIR__ . '/../inc/fonctions-saisons.php';
+require_once __DIR__ . '/../inc/csrf.php';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && !csrfValide()) {
+    http_response_code(403);
+    die('Requête refusée : jeton CSRF manquant ou invalide.');
+}
+
 require_once __DIR__ . '/../inc/bdd.php';
 require_once __DIR__ . '/../inc/entete.php';
 $pdo = getConnection();

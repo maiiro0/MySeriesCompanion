@@ -1,10 +1,18 @@
-<?php require_once __DIR__ . '/../inc/fonctions-series.php'; 
+<?php require_once __DIR__ . '/../inc/fonctions-series.php';
+require_once __DIR__ . '/../inc/csrf.php';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && !csrfValide()) {
+    http_response_code(403);
+    die('Requête refusée : jeton CSRF manquant ou invalide.');
+}
+
 require_once __DIR__ . '/../inc/bdd.php';
 require_once __DIR__ . '/../inc/entete.php';
-$pdo = getConnection();?> 
+$pdo = getConnection();?>
 
 <h2 class="text-2xl font-bold mb-10 text-center mt-20" >Ajouter une série</h2>
 <form method="POST" class="form-control mx-auto w-3/6 mt-10 mb-20">
+    <?= csrfChamp() ?>
     <label class="floating-label">
         <input type="text" name="nom" placeholder="Nom" class="input input-lg w-full" />
         <span>Nom (obligatoire)</span>
