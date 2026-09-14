@@ -1,2 +1,20 @@
-package.json
-package-lock.json
+# Dépendances npm
+node_modules/
+
+# CSS généré par Tailwind (fichier build, pas besoin de le versionner)
+public/css/output.css
+
+# Fichiers d'environnement / config sensible
+.env
+config/database.php
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Fichiers temporaires d'éditeur
+.vscode/
+*.swp
