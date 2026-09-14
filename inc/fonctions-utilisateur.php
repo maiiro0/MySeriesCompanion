@@ -10,7 +10,7 @@ function inscription(PDO $pdo, $nom, $prenom, $email): void
     $requete->execute();
 }
 
-function utilisateurInfos($pdo, $nom, $prenom, $email): array
+function utilisateurInfos($pdo, $nom, $prenom, $email): ?array
 {
     $requete = $pdo->prepare("SELECT * FROM personne WHERE nom = :nom AND prenom = :prenom AND email = :email");
     $requete->bindParam(':nom', $nom);
