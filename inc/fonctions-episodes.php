@@ -1,5 +1,14 @@
 <?php
 
+function getEpisodesById(PDO $pdo, int $id): ?array
+{
+    $requete = $pdo->prepare("SELECT * FROM episode WHERE id = :id");
+    $requete->bindParam(':id', $id, PDO::PARAM_INT);
+    $requete->execute();
+    $episode = $requete->fetch(PDO::FETCH_ASSOC);
+    return $episode ?: null;
+}
+
 function getEpisodesBySaisonId(PDO $pdo, int $saison_id): array
 {
     $requete = $pdo->prepare("SELECT * FROM episode WHERE saison_id = :saison_id");
@@ -7,7 +16,6 @@ function getEpisodesBySaisonId(PDO $pdo, int $saison_id): array
     $requete->execute();
     return $requete->fetchAll(PDO::FETCH_ASSOC);
 }
-
 
 function ajouterEpisode(PDO $pdo, int $saison_id, string $nom, string $resume, string $vignette, string $date_sortie, ?int $duree = null): void
 {
