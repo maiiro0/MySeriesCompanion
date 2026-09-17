@@ -25,7 +25,7 @@ if ($serie === null) {
 
 ?> 
 
-<ul class="list bg-base-100 rounded-box shadow-md w-3/6 mx-auto mt-10 mb-20">
+<ul class="list bg-base-100 rounded-box shadow-md w-4/6 mx-auto mt-10 mb-20">
     <li class="text-center">
         <div>
             <h2 class="text-2xl font-bold mb-5 text-center w-full"><?= $serie['nom'] ?></h2>
@@ -62,7 +62,7 @@ $saisons = getSaisonsBySerieId($pdo, (int)$id);
 if (empty($saisons)) {
     ?><p class="text-center text-red-500">Aucune saison trouvée pour cette série.</p><?php
 } else {?>
-    <ul class="list bg-base-100 rounded-box shadow-md w-3/6 mx-auto mt-10">
+    <ul class="list bg-base-100 rounded-box shadow-md w-4/6 mx-auto mt-10 p-3">
         <?php foreach ($saisons as $saison): ?>
             <li class="list mb-10">
                 <div class="flex justify-between">
@@ -81,7 +81,7 @@ if (empty($saisons)) {
 
 
 
-<button class="btn block w-3/6 mx-auto mb-30" onclick="my_modal_1.showModal()">Ajouter une saison</button>
+<button class="btn block w-4/6 mx-auto mb-30 mt-10" onclick="my_modal_1.showModal()">Ajouter une saison</button>
 <dialog id="my_modal_1" class="modal">
     <div class="modal-box">
         <h2 class="text-2xl font-bold mb-10 text-center mt-10" >Ajouter une saison</h2>

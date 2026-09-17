@@ -92,11 +92,11 @@ if (empty($episodes)) {
 
 
 
-<button class="btn block w-full mx-auto mb-30" onclick="my_modal_1.showModal()">Ajouter un épisode</button>
+<button class="btn block mx-auto mb-30 w-4/6" onclick="my_modal_1.showModal()">Ajouter un épisode</button>
 <dialog id="my_modal_1" class="modal">
     <div class="modal-box">
         <h2 class="text-2xl font-bold mb-10 text-center mt-10" >Ajouter une saison</h2>
-        <form method="POST" class="form-control mx-auto w-5/6 mt-10 mb-5">
+        <form method="POST" class="form-control mx-auto w-4/6 mt-10 mb-5">
             <?= csrfChamp() ?>
             <label class="floating-label">
                 <input type="text" name="nom" placeholder="Nom" class="input input-lg w-full" />

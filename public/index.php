@@ -29,10 +29,7 @@ $pdo = getConnection();?>
 
     <button type="submit" class="btn mt-10 w-full">Valider</button>
 </form>
-
-
-
-
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
 
 <button class="btn block w-3/6 mx-auto mb-5" onclick="my_modal_1.showModal()">S'inscrire</button>
 <dialog id="my_modal_1" class="modal">
@@ -81,10 +78,6 @@ $pdo = getConnection();?>
         ?>
     </div>
 </dialog>
-
-
-
-
 
 
 <?php 

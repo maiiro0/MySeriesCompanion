@@ -13,16 +13,16 @@ $pdo = getConnection();?>
 <h2 class="text-2xl font-bold mb-10 text-center mt-20" >Ajouter une série</h2>
 <form method="POST" class="form-control mx-auto w-3/6 mt-10 mb-20">
     <?= csrfChamp() ?>
-    <label class="floating-label">
+    <label class="floating-label pb-3">
         <input type="text" name="nom" placeholder="Nom" class="input input-lg w-full" />
         <span>Nom (obligatoire)</span>
     </label>
     <textarea name="resume" class="textarea w-full" placeholder="Résumé"></textarea>
-    <label class="floating-label">
+    <label class="floating-label pb-3 pt-3">
         <input type="text" name="vignette" placeholder="Vignette" class="input input-lg w-full" />
         <span>Vignette</span>
     </label>
-    <label class="floating-label">
+    <label class="floating-label pb-3">
         <input type="date" name="date_sortie" class="input input-lg w-full" />
         <span>Date de sortie (obligatoire)</span>
     </label>

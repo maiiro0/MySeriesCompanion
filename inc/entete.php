@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="retro">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +13,7 @@
         </div>
         <div class="flex-none">
             <ul class="menu menu-horizontal px-1">
-            <li><a href="index.php">Ajout</a></li>
+            <li><a href="ajout-serie.php">Ajout</a></li>
             <li><a href="liste-series.php">Séries</a></li>
             </ul>
         </div>
